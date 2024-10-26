@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from '../styles/productContainer.module.scss'
+import styles from '../styles/productContainer.module.scss';
+import btnStyle from '../styles/genericStylesBtn.module.scss';
 import React from 'react';
 
 export default function ProductContainer() {
@@ -18,7 +19,7 @@ export default function ProductContainer() {
                 <img src="./ellipse-icon.svg" alt="ETH icon" />
                 <p>32 ETH</p>
             </div>
-            <button className={styles.buyBtn}>Comprar</button>
+            <button className={btnStyle.genericStylesBtn}>Comprar</button>
         </div>
     </div>
   )
