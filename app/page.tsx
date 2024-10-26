@@ -5,14 +5,14 @@ import styles from "./styles/page.module.scss";
 
 export default function Home() {
   return (
-    <>
+    <main className={styles.page}>
       <Header/>
-      <main className={styles.page}>
+      <section className={styles.pageSection}>
           <div className={styles.productsWrapper}>
             <ProductContainer/>
           </div>
-      </main>
+      </section>
       <Footer/>
-    </>
+    </main>
   );
 }
