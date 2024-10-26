@@ -1,0 +1,45 @@
+/* 
+width: 1728px;
+height: 1985px;
+*/
+@use './mixins.scss';
+.page {
+    width: 100vw;
+    @include mixins.flexBox(column, space-between, center);
+}
+
+.pageSection {
+    min-height: calc(100vh - 117px);
+    padding: 8px;
+    overflow: hidden;
+    @include mixins.flexBox(row, center, start);
+
+    @media (min-width: 600px) {
+        padding: 20px;
+    };
+    @media (min-width: 1021px) {
+        padding: 80px;
+    };
+
+    .productsWrapper {
+        overflow-x: hidden;
+        max-width: 1510px;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 20px;
+
+        @media (min-width: 720px) {
+            grid-template-columns: 1fr 1fr;
+        };
+        @media (min-width: 1100px) {
+            grid-template-columns: repeat(3, 1fr);
+
+        };
+        @media (min-width: 1500px) {
+            grid-template-columns: repeat(4, 1fr);
+        };
+    }
+    
+}
